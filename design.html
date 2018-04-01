@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sleepy dragon</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i" rel="stylesheet">
+        <style>
+            body {
+                background-color: #222225;
+            }
+            h2 {
+                color: #f0eff7;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+            }
+            p{
+                font-size: 9px;
+                color: #f0eff7;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 100;
+                font-style: italic
+            }
+            ul {
+                text-align: center;
+                padding: 10px;
+            }
+            div.arrow {
+                font-family: 'Arial', sans-serif;
+                color: #60c19a;
+                font-size: 48px;
+            }
+            .button {
+                background-color: #222225;
+                border: none;
+                color: #f0eff7;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 100;
+                font-style: italic;
+                font-size: 16px;
+                padding: 0px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+            }
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+            .button span:after {
+                content: '\00bb';
+                color: #f0eff7;
+                font-weight: 300;
+                font-style: normal;
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+            .button:hover span {
+                padding-right: 25px;
+                color: #60c19a;
+            }
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+             .animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1.5s;
+  animation-name: animatebottom;
+  animation-duration: 1.5s
+}
+@keyframes animatebottom { 
+  from{ bottom:-20px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+            #myDiv {
+  display: none;
+  text-align: center;
+}
+        </style>
+    </head>
+    <body onload="myFunction()">
+        <div style="display:none; margin-top: 75px;" id="myDiv" class="animate-bottom">
+            <img src="https://s4.nofilecdn.io/g/atgeY5bfyhCmz2lKjO1dHyZobqGihFd67JlZCgSq2qWh8GKYs5ccPgZbVZcZs5zU/sleepydragontail.svg/p" width='300px'>
+            <div class="arrow">︽</div>
+            <ul>
+            <li><button class="button"><span>_about</span></button></li>
+            <li><button class="button"><span>_mechanical</span></button></li>
+            <li><button class="button"><span>_aesthetic</span></button></li>
+            <li><button class="button"><span>_builds</span></button></li>
+            <li><button class="button"><span>_contact</span></button></li>
+            </ul>
+            <div class="arrow">︾</div>
+            <p>sleepy dragon driveworks est. 2018. enjoy your stay.</p>
+</div>
+        <script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 0);
+}
+
+function showPage() {
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+    </body>
+</html>
